@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+
+  #before_filter :force_ssl
   
   def new
     @title = "Sign in"
@@ -23,5 +25,14 @@ class SessionsController < ApplicationController
     sign_out
     redirect_to root_path
   end
+  
+  
+  #private
+  #
+  #def force_ssl
+  #  if !request.ssl?
+  #    redirect_to :protocol => 'https'
+  #  end
+  #end
 
 end
