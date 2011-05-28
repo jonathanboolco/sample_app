@@ -36,7 +36,7 @@ module SampleApp
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
-    #config.middleware.insert_before ActionDispatch::Static, Rack::SSL, :exclude => proc { |env| env['HTTPS'] != 'on' }, :force_secure_cookies => false
+    #config.middleware.insert_before ActionDispatch::Static, Rack::SSL, :exclude => proc { |env| env['HTTPS'] != 'on' }
     
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
